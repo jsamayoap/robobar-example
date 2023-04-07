@@ -19,4 +19,9 @@ describe(DrinkService.name, () => {
     const actual = await sut.getDrinks();
     expect(actual).toStrictEqual(expectedDrinks);
   });
+
+  it('dring API should be the expected value', () => {
+    let apiURL = sut.drinkServiceAPI();
+    expect(apiURL).toStrictEqual('api/v2/drinks.json');
+  })
 });
